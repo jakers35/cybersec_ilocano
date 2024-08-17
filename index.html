@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Group</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Our Cybersecurity Group</h1>
+    <nav>
+      <div class="burger-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" id="signup-btn">Join Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section id="hero">
+      <div class="hero-content">
+        <h2>Your Cybersecurity Journey Starts Here</h2>
+        <p>Explore our tools, resources, and community to strengthen your cybersecurity skills.</p>
+        <a href="#resources" class="btn">Get Started</a>
+      </div>
+    </section>
+
+    <!-- Other sections remain unchanged -->
+
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Cybersecurity Group. All rights reserved.</p>
+  </footer>
+
+  <!-- Sign In Modal -->
+  <div id="signin-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Sign In</h2>
+      <form id="signin-form">
+        <label for="signin-email">Email:</label>
+        <input type="email" id="signin-email" name="signin-email" required>
+        <label for="signin-password">Password:</label>
+        <input type="password" id="signin-password" name="signin-password" required>
+        <button type="submit" class="btn">Sign In</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div id="signup-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Join Our Community</h2>
+      <form id="signup-form">
+        <label for="signup-name">Name:</label>
+        <input type="text" id="signup-name" name="signup-name" required>
+        <label for="signup-email">Email:</label>
+        <input type="email" id="signup-email" name="signup-email" required>
+        <label for="signup-password">Password:</label>
+        <input type="password" id="signup-password" name="signup-password" required>
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <script src="scripts.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const signinModal = document.getElementById('signin-modal');
+        const signupModal = document.getElementById('signup-modal');
+        const closeButtons = document.querySelectorAll('.modal .close');
+        const content = document.getElementById('content');
+
+        // Check if the user is signed in
+        const isAuthenticated = localStorage.getItem('isAuthenticated');
+
+        if (!isAuthenticated) {
+            // Hide the content and show the sign-in modal if the user is not authenticated
+            content.style.display = 'none';
+            signinModal.style.display = 'flex';
+        } else {
+            content.style.display = 'block';
+        }
+
+        // Open Sign Up Modal
+        document.getElementById('signup-btn').addEventListener('click', function() {
+            signupModal.style.display = 'flex';
+        });
+
+        // Close modals
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                signinModal.style.display = 'none';
+                signupModal.style.display = 'none';
+            });
+        });
+
+        // Sign In Form Submission
+        document.getElementById('signin-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Example Authentication Logic
+            const email = document.getElementById('signin-email').value;
+            const password = document.getElementById('signin-password').value;
+
+            // Replace with actual authentication API call
+            if (email === 'user@example.com' && password === 'password123') {
+                localStorage.setItem('isAuthenticated', true);
+                signinModal.style.display = 'none';
+                content.style.display = 'block';
+            } else {
+                alert('Invalid credentials');
+            }
+        });
+
+        // Sign Up Form Submission
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Example Registration Logic
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+
+            // Replace with actual registration API call
+            console.log('Sign up:', { name, email, password });
+            alert('Registration successful!');
+            signupModal.style.display = 'none';
+        });
+    });
+  </script>
+</body>
+</html>
