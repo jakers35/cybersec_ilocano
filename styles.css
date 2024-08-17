@@ -1,25 +1,19 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #1e1e2f;
+  color: #fff;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-}
-
-header {
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
-  text-align: center;
+  line-height: 1.6;
 }
 
 h1, h2, h3 {
-  color: #333;
+  color: #00bcd4;
 }
 
 p {
-  color: #555;
-  line-height: 1.6;
+  margin: 0 0 1rem;
 }
 
 ul {
@@ -28,216 +22,337 @@ ul {
 }
 
 a {
-  color: #007bff;
+  color: #00bcd4;
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #03a9f4;
 }
 
-/* Navigation */
+header {
+  background: #27293d;
+  padding: 1rem 0;
+  text-align: center;
+  border-bottom: 3px solid #00bcd4;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  background-color: #444;
+  margin-top: 1rem;
 }
 
 .nav-links {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .nav-links li {
-  margin: 0 15px;
-}
-
-.nav-links a {
-  color: white;
-  font-weight: bold;
+  display: inline;
 }
 
 .burger-icon {
   display: none;
-  color: white;
-  font-size: 24px;
+  font-size: 2rem;
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .burger-icon {
-    display: block;
-  }
+.burger-icon i {
+  color: #00bcd4;
+}
 
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #00bcd4;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  text-transform: uppercase;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+  background: #03a9f4;
+}
+
+/* Hero Section */
+#hero {
+  background: url('https://source.unsplash.com/1600x900/?cybersecurity') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 8rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+}
+
+/* Section Styles */
+section {
+  background: #27293d;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid #00bcd4;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+section ul {
+  margin-top: 1rem;
+}
+
+section ul li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+section ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #00bcd4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #444;
+    background: #27293d;
     position: absolute;
     top: 60px;
     right: 0;
     width: 200px;
+    border-radius: 0 0 10px 10px;
   }
 
   .nav-links.active {
     display: flex;
   }
 
-  .nav-links li {
-    margin: 10px 0;
+  .burger-icon {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 1.5rem;
   }
 }
 
-/* Hero Section */
-#hero {
-  background: url('cybersecurity-background.jpg') no-repeat center center/cover;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
+/* Form Styling */
+form {
+  background: #1e1e2f;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.hero-content h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #03a9f4;
 }
 
-.hero-content p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-}
-
-.hero-content .btn {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-.hero-content .btn:hover {
-  background-color: #0056b3;
-}
-
-/* Main Content Sections */
-main {
-  padding: 20px;
-  background-color: #fff;
-}
-
-section {
-  margin-bottom: 50px;
-}
-
-section h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-section p {
-  font-size: 1.1em;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-/* Buttons */
-.btn {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
+form input, form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
   border-radius: 5px;
   border: none;
-  cursor: pointer;
+  background: #27293d;
+  color: #fff;
 }
 
-.btn:hover {
-  background-color: #0056b3;
+form button {
+  width: 100%;
+  background: #00bcd4;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Footer */
+form button:hover {
+  background: #03a9f4;
+}
+
+/* Footer Styling */
 footer {
-  background-color: #333;
-  color: white;
+  background: #27293d;
+  padding: 1rem 0;
   text-align: center;
-  padding: 10px 0;
+  color: #fff;
+  border-top: 3px solid #00bcd4;
 }
 
-/* Modal Styles */
+footer p {
+  margin: 0;
+}
+
+/* Social Icons */
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+
+.social-icons a:hover {
+  color: #03a9f4;
+}
+
+/* Modal Styling */
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 400px;
+  background: #27293d;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
   position: relative;
-  text-align: left;
-  border-radius: 8px;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .modal-content h2 {
-  margin-top: 0;
-  font-size: 1.8em;
+  margin-bottom: 1.5rem;
 }
 
-.modal-content label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.modal-content input[type="text"],
-.modal-content input[type="email"],
-.modal-content input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1em;
-}
-
-.modal-content .btn {
-  width: 100%;
-  padding: 10px;
-  font-size: 1.2em;
-  border-radius: 4px;
-  margin-top: 10px;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.modal .close {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
   cursor: pointer;
+  color: #fff;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+#chat-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  background: #27293d;
+  border-radius: 150px;
+  box-shadow: 0px 205px 100px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  z-index: 1000;
+}
+
+#chatbox {
+  background: #1e1e2f;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+#chatbox #messages {
+  height: 100px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.user-message, .bot-message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #1e1e2f;
+}
+
+#user-input {
+  width: 80%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  background: #1e1e2f;
+  color: #fff;
+}
+
+#send-btn {
+  width: 15%;
+  padding: 0.5rem;
+  background: #00bcd4;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+#send-btn:hover {
+  background: #03a9f4;
+}
+
+#ip-locator {
+  padding: 2rem;
+  background-color: #27293d;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#ip-locator h2 {
+  color: #00bcd4;
+}
+
+#ip-info {
+  font-size: 1.2rem;
+  color: #ffffff;
 }
