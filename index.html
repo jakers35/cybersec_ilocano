@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+
   <header>
     <h1>Welcome to Our Cybersecurity Group</h1>
     <nav>
@@ -27,7 +28,7 @@
     </nav>
   </header>
 
-  <main id="content">
+  <main>
     <section id="hero">
       <div class="hero-content">
         <h2>Your Cybersecurity Journey Starts Here</h2>
@@ -35,36 +36,116 @@
         <a href="#resources" class="btn">Get Started</a>
       </div>
     </section>
+    
+    <section id="home">
+      <h2>Home</h2>
+      <p>Welcome to the home of cybersecurity enthusiasts, professionals, and learners. Join us in securing the digital world.</p>
+    </section>
+    
+    <section id="resources">
+      <h2>Resources</h2>
+      <p>Explore our curated list of cybersecurity resources, including tutorials, e-books, and video content to enhance your knowledge.</p>
+      <ul>
+        <li><a href="https://www.hacker101.com" target="_blank">Hacker101 Video Library</a></li>
+        <li><a href="https://portswigger.net/web-security" target="_blank">PortSwigger Web Security Academy</a></li>
+        <li><a href="https://www.hackerone.com/hacktivity" target="_blank">HackerOne Hacktivity Feed</a></li>
+        <li><a href="https://www.cybrary.it" target="_blank">Cybrary Courses</a> - Free online cybersecurity courses.</li>
+        <li><a href="https://www.securitytube.net" target="_blank">SecurityTube</a> - Online video training for cybersecurity.</li>
+      </ul>
+    </section>
 
-    <!-- Other sections remain unchanged -->
+    <section id="tools">
+      <h2>Tools</h2>
+      <p>Access a variety of tools and platforms for penetration testing, vulnerability scanning, and more.</p>
+      <ul>
+        <li><a href="https://www.kali.org" target="_blank">Kali Linux</a> - The most popular platform for penetration testing.</li>
+        <li><a href="https://www.owasp.org" target="_blank">OWASP ZAP</a> - A powerful web application security scanner.</li>
+        <li><a href="https://www.metasploit.com" target="_blank">Metasploit</a> - The world's most used penetration testing framework.</li>
+        <li><a href="https://nmap.org" target="_blank">Nmap</a> - A network scanning tool for security auditing.</li>
+        <li><a href="https://www.wireshark.org" target="_blank">Wireshark</a> - A network protocol analyzer for monitoring traffic.</li>
+        <li><a href="https://www.burpsuite.com" target="_blank">Burp Suite</a> - An integrated platform for performing security testing of web applications.</li>
+        <li><a href="https://www.sqlmap.org" target="_blank">SQLmap</a> - An automated tool for detecting and exploiting SQL injection flaws.</li>
+        <li><a href="https://hydra.kali.org/" target="_blank">Hydra</a> - A parallelized login cracker which supports numerous protocols to attack.</li>
+      </ul>
+    </section>
 
+    <section id="blog">
+      <h2>Blog</h2>
+      <p>Read our latest articles on cybersecurity trends, tools, and techniques.</p>
+      <article>
+        <h3><a href="#">Understanding the OWASP Top 10</a></h3>
+        <p>A deep dive into the OWASP Top 10 vulnerabilities and how to protect your applications.</p>
+      </article>
+      <article>
+        <h3><a href="#">Getting Started with Penetration Testing</a></h3>
+        <p>Learn the basics of penetration testing and how to set up your own testing environment.</p>
+      </article>
+    </section>
+
+    <section id="events">
+      <h2>Events</h2>
+      <p>Join our upcoming webinars, CTFs (Capture the Flag), and live hacking events.</p>
+      <ul>
+        <li>August 25, 2024: <a href="#">Web Application Security Webinar</a></li>
+        <li>September 10, 2024: <a href="#">CTF Challenge: Hack the Box</a></li>
+        <li>October 15, 2024: <a href="#">Live Hacking Event</a></li>
+        <li>November 20, 2024: <a href="#">Cybersecurity Awareness Month Workshop</a></li>
+      </ul>
+    </section>
+
+    <section id="community">
+      <h2>Community</h2>
+      <p>Engage with other members in our forums and Discord server to discuss cybersecurity topics, share knowledge, and collaborate on projects.</p>
+      <a href="https://discord.gg/your-discord-link" class="btn" target="_blank">Join Our Discord</a>
+    </section>
+      
+    <section id="contact">
+      <h2>Contact</h2>
+      <form action="https://your-server-endpoint/contact" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit" class="btn">Send</button>
+      </form>
+      <p>Or reach out to us via email at <a href="mailto: info@cybersecuritygroup.com">info@cybersecuritygroup.com</a></p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/your-page" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/your-profile" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="mailto: info@cybersecuritygroup.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </section>
+    
+    <section id="ip-locator">
+      <h2>Your Location</h2>
+      <p id="ip-info">Fetching your location...</p>
+    </section>
+
+    <section id="share-boosting">
+      <h2>Share This Page</h2>
+      <div class="share-buttons">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://cybersecuritygroup.com" target="_blank" class="btn btn-facebook">
+          <i class="fab fa-facebook-f"></i> Share on Facebook
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=https://cybersecuritygroup.com&text=Check%20this%20out!" target="_blank" class="btn btn-twitter">
+          <i class="fab fa-twitter"></i> Share on Twitter
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2024 Cybersecurity Group. All rights reserved.</p>
   </footer>
 
-  <!-- Sign In Modal -->
-  <div id="signin-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Sign In</h2>
-      <form id="signin-form">
-        <label for="signin-email">Email:</label>
-        <input type="email" id="signin-email" name="signin-email" required>
-        <label for="signin-password">Password:</label>
-        <input type="password" id="signin-password" name="signin-password" required>
-        <button type="submit" class="btn">Sign In</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Sign Up Modal -->
+  <!-- Signup Modal -->
   <div id="signup-modal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Join Our Community</h2>
-      <form id="signup-form">
+      <form action="https://your-server-endpoint/signup" method="post">
         <label for="signup-name">Name:</label>
         <input type="text" id="signup-name" name="signup-name" required>
         <label for="signup-email">Email:</label>
@@ -76,72 +157,100 @@
     </div>
   </div>
 
+  <div id="chat-container">
+    <div id="chatbox">
+      <div id="messages"></div>
+      <input type="text" id="user-input" placeholder="Ask your cybersecurity question...">
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <!-- Include necessary JavaScript libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
   <script src="scripts.js"></script>
+  
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const signinModal = document.getElementById('signin-modal');
-        const signupModal = document.getElementById('signup-modal');
-        const closeButtons = document.querySelectorAll('.modal .close');
-        const content = document.getElementById('content');
+    // Toggle modal visibility
+    document.getElementById('signup-btn').addEventListener('click', function() {
+      document.getElementById('signup-modal').style.display = 'flex';
+    });
 
-        // Check if the user is signed in
-        const isAuthenticated = localStorage.getItem('isAuthenticated');
+    document.querySelector('.modal .close').addEventListener('click', function() {
+      document.getElementById('signup-modal').style.display = 'none';
+    });
 
-        if (!isAuthenticated) {
-            // Hide the content and show the sign-in modal if the user is not authenticated
-            content.style.display = 'none';
-            signinModal.style.display = 'flex';
-        } else {
-            content.style.display = 'block';
-        }
+    // Fetch IP Location
+    axios.get('https://ipapi.co/json/')
+      .then(function(response) {
+        const data = response.data;
+        const location = `${data.city}, ${data.region}, ${data.country_name}`;
+        document.getElementById('ip-info').textContent = `Your location is: ${location}`;
+      })
+      .catch(function(error) {
+        console.log('Error fetching IP location:', error);
+        document.getElementById('ip-info').textContent = 'Unable to fetch location.';
+      });
 
-        // Open Sign Up Modal
-        document.getElementById('signup-btn').addEventListener('click', function() {
-            signupModal.style.display = 'flex';
-        });
+    // Responsive nav menu
+    document.querySelector('.burger-icon').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
 
-        // Close modals
-        closeButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                signinModal.style.display = 'none';
-                signupModal.style.display = 'none';
+    // Chatbot functionality
+    document.getElementById('send-btn').addEventListener('click', function() {
+        const userInput = document.getElementById('user-input').value.trim();
+        if (userInput) {
+            document.getElementById('messages').innerHTML += `<div class="user-message">${userInput}</div>`;
+            
+            // Call Dialogflow API here
+            fetch('https://api.dialogflow.com/v1/query?v=20150910', {
+                method: 'POST',
+                headers: {
+                    'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    query: userInput,
+                    lang: 'en',
+                    sessionId: '12345'
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const botMessage = data.result.fulfillment.speech || 'I didn’t get that. Can you say it again?';
+                document.getElementById('messages').innerHTML += `<div class="bot-message">${botMessage}</div>`;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('messages').innerHTML += `<div class="bot-message">Oops! Something went wrong.</div>`;
             });
-        });
 
-        // Sign In Form Submission
-        document.getElementById('signin-form').addEventListener('submit', function(e) {
-            e.preventDefault();
+            document.getElementById('user-input').value = ''; // Clear the input box
+        }
+    });
 
-            // Example Authentication Logic
-            const email = document.getElementById('signin-email').value;
-            const password = document.getElementById('signin-password').value;
+    // Chatra Chatbot integration
+    (function(d, w, c) {
+        w.ChatraID = 'your-chatra-id';
+        var s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = 'https://call.chatra.io/chatra.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
 
-            // Replace with actual authentication API call
-            if (email === 'user@example.com' && password === 'password123') {
-                localStorage.setItem('isAuthenticated', true);
-                signinModal.style.display = 'none';
-                content.style.display = 'block';
-            } else {
-                alert('Invalid credentials');
-            }
-        });
-
-        // Sign Up Form Submission
-        document.getElementById('signup-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Example Registration Logic
-            const name = document.getElementById('signup-name').value;
-            const email = document.getElementById('signup-email').value;
-            const password = document.getElementById('signup-password').value;
-
-            // Replace with actual registration API call
-            console.log('Sign up:', { name, email, password });
-            alert('Registration successful!');
-            signupModal.style.display = 'none';
+    // Example: Open Chatra chat with a button or link
+    document.querySelectorAll('[data-chatra]').forEach(function(element) {
+        element.addEventListener('click', function() {
+            Chatra('openChat', true);
         });
     });
+
   </script>
+
+  <!-- Custom button to open chat -->
+  <button data-chatra>Chat with us</button>
 </body>
 </html>
