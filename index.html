@@ -292,3 +292,56 @@
   <button data-chatra>Chat with us</button>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Jake's Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #signup-container {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        #signup-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        #signup-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="signup-container">
+        <h1>Welcome to Jake's Chatroom!</h1>
+        <p>Click the button below to sign up and join the chatroom.</p>
+        <button id="signup-button" onclick="redirectToSignup()">Sign Up for Chatroom</button>
+    </div>
+
+    <script>
+        function redirectToSignup() {
+            // Redirect to your Replit project (replace the URL with your actual Replit URL)
+            window.location.href = 'https://replit.com/@YourUsername/YourProject';
+        }
+    </script>
+</body>
+</html>
+
