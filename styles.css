@@ -251,35 +251,7 @@ footer p {
     display: none;
 }
 
-#chatbox {
-    padding: 20px;
-}
 
-#chatbox #messages {
-    height: 200px;
-    overflow-y: auto;
-    margin-bottom: 10px;
-}
-
-#chatbox #user-input {
-    width: 80%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#chatbox #send-btn {
-    padding: 10px 20px;
-    background: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#chatbox #send-btn:hover {
-    background: #2980b9;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
