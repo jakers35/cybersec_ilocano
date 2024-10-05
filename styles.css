@@ -1,278 +1,194 @@
-/* Reset some default browser styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Basic body styling */
+/* General Styles */
 body {
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4;
 }
 
-/* Header styling */
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    text-transform: uppercase;
+  margin: 0;
+  font-size: 2rem;
 }
 
 nav {
-    margin: 10px 0;
-}
-
-nav .burger-icon {
-    display: none;
-    font-size: 1.5em;
-    cursor: pointer;
+  margin-top: 10px;
+  position: relative;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1em;
-    padding: 5px 10px;
-    transition: background 0.3s;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-nav ul li a:hover {
-    background: #555;
-    border-radius: 5px;
+.burger-icon {
+  display: none;
+  cursor: pointer;
 }
 
-/* Hero Section Styling */
+.burger-icon i {
+  font-size: 24px;
+  color: white;
+}
+
+/* Hero Section */
 #hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    padding: 20px;
-}
-
-#hero h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-#hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
 }
 
 #hero .btn {
-    background: #f39c12;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background 0.3s ease;
 }
 
 #hero .btn:hover {
-    background: #e67e22;
+  background-color: #555;
 }
 
-/* Main Sections Styling */
-main section {
-    padding: 50px 20px;
-    text-align: center;
-    background: #fff;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Section Styles */
+section {
+  padding: 30px 20px;
+  text-align: center;
 }
 
-main section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-main section p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
+ul li {
+  margin-bottom: 10px;
 }
 
-main section ul {
-    list-style: none;
-    margin: 20px 0;
-    padding: 0;
+ul li a {
+  color: #0073e6;
+  text-decoration: none;
 }
 
-main section ul li {
-    font-size: 1.1em;
-    margin: 10px 0;
+ul li a:hover {
+  text-decoration: underline;
 }
 
-main section ul li a {
-    color: #3498db;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-main section ul li a:hover {
-    color: #2980b9;
-}
-
-/* Blog Article Styling */
-article {
-    text-align: left;
-    margin: 20px 0;
-    padding: 20px;
-    background: #f9f9f9;
-    border-left: 4px solid #3498db;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-article h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-article p {
-    font-size: 1.1em;
-}
-
-/* Buttons Styling */
+/* Buttons */
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #3498db;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
+  background-color: #333;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
-    background: #2980b9;
+  background-color: #555;
 }
 
-/* Social Icons Styling */
-.social-icons a {
-    color: #333;
-    font-size: 1.5em;
-    margin: 0 10px;
-    transition: color 0.3s;
+.btn-facebook {
+  background-color: #3b5998;
 }
 
-.social-icons a:hover {
-    color: #3498db;
+.btn-twitter {
+  background-color: #1da1f2;
 }
 
-/* Footer Styling */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #333;
-    color: #fff;
-    margin-top: 20px;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Modal Styling */
+/* Modal Styles */
 .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  max-width: 500px;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.modal-content h2 {
-    margin-bottom: 20px;
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
 }
 
-.modal-content form input,
-.modal-content form button {
-    width: 80%;
-    margin-bottom: 10px;
-    padding: 10px;
+/* Social Icons */
+.social-icons a {
+  color: #333;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
-.modal-content .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 1.5em;
+.social-icons a:hover {
+  color: #0073e6;
 }
 
-/* Chatbox Styling */
-#chat-container {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background: #fff;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: none;
-}
-
-
-
-/* Responsive Design */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        display: none;
-    }
+  .burger-icon {
+    display: block;
+  }
 
-    nav ul.active {
-        display: flex;
-    }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
 
-    nav .burger-icon {
-        display: block;
-    }
+  .nav-links.active {
+    display: flex;
+  }
 
-    #hero h2 {
-        font-size: 2.5em;
-    }
+  nav ul li {
+    margin: 10px 0;
+  }
+}
 
-    main section {
-        padding: 30px 10px;
-    }
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
 }
