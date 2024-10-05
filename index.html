@@ -235,59 +235,7 @@
     });
     <div style="height: 500px;"><div id="rt-8b472d82095358fa2300af77fad47873"></div> <script src="https://rumbletalk.com/client/?WKbFVL0S"></script></div>
 
-    // Chatbot functionality
-    document.getElementById('send-btn').addEventListener('click', function() {
-        const userInput = document.getElementById('user-input').value.trim();
-        if (userInput) {
-            document.getElementById('messages').innerHTML += `<div class="user-message">${userInput}</div>`;
-            
-            // Call Dialogflow API here
-            fetch('https://api.dialogflow.com/v1/query?v=20150910', {
-                method: 'POST',
-                headers: {
-                    'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    query: userInput,
-                    lang: 'en',
-                    sessionId: '12345'
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                const botMessage = data.result.fulfillment.speech || 'I didn’t get that. Can you say it again?';
-                document.getElementById('messages').innerHTML += `<div class="bot-message">${botMessage}</div>`;
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('messages').innerHTML += `<div class="bot-message">Oops! Something went wrong.</div>`;
-            });
-
-            document.getElementById('user-input').value = ''; // Clear the input box
-        }
-    });
-
-    // Chatra Chatbot integration
-    (function(d, w, c) {
-        w.ChatraID = 'your-chatra-id';
-        var s = d.createElement('script');
-        w[c] = w[c] || function() {
-            (w[c].q = w[c].q || []).push(arguments);
-        };
-        s.async = true;
-        s.src = 'https://call.chatra.io/chatra.js';
-        if (d.head) d.head.appendChild(s);
-    })(document, window, 'Chatra');
-
-    // Example: Open Chatra chat with a button or link
-    document.querySelectorAll('[data-chatra]').forEach(function(element) {
-        element.addEventListener('click', function() {
-            Chatra('openChat', true);
-        });
-    });
-
-  </script>
+    /
 
   <!-- Custom button to open chat -->
   <button data-chatra>Chat with us</button>
